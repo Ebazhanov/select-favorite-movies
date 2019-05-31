@@ -1,12 +1,21 @@
-module.exports = {
+const path = require('path')
+const rules = [
+    {
+        test: /\.tsx?/,
+        exclude: /node_module/,
+        loader: 'babel-loader'
+    }
+]
+
+odule.exports = {
     target: 'web',
     mode: 'development',
     entry: './src/index/tsx',
     output: {
-        path: null,
+        path: path.resolve(_dirname, 'build'),
         filename: 'bundle.js'
     },
-    module: null,
+    module: { rules },
     resolve: {extentions: ['.ts', '.tsx', '.js']},
     devServer: {
         contentBase: './',
