@@ -9,6 +9,6 @@ export default function App(): JSX.Element {
     )
 }
 
-const root = document.getElementById('app-root')
+const root = document.getElementById('app-root');
 
-ReactDOM.render(<App />, root)
+ReactDOM.render(<App/>, root);
