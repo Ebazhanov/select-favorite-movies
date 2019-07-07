@@ -1,3 +1,0 @@
-# IN PROGRESS
-
-- `$ npm start`
