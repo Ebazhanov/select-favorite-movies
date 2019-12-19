@@ -23,7 +23,7 @@ export default function App(): JSX.Element {
     });
 
     const fetchDataAction = async () => {
-        const URL = 'https://api.tvmaze.com/singlesearch/shows?q=rick-&-morty&embed=episodes';
+        const URL = 'https://api.tvmaze.com/singlesearch/shows?q=love&embed=episodes';
         const data = await fetch(URL);
         const dataJSON = await data.json();
         return dispatch({
