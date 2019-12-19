@@ -1,4 +1,2 @@
-TODO list with TS + React
--------------------------
-
-- `$ npm run start`
+https://hooks-react.netlify.com/
+--------------------------------
