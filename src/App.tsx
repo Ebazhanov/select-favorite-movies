@@ -35,7 +35,7 @@ export default function App(): JSX.Element {
     return (
         <React.Fragment>
             <header className="header">
-            <h1>Rick and Morty</h1>
+            <h1>Love stories</h1>
             <p>Pick your favorite episode !!!</p>
             </header>
             <section className="episode-layout">
