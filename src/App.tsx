@@ -1,10 +1,10 @@
 import React from 'react';
 import {Store} from "./Store";
 import {IAction, IEpisode} from "./interfaces";
+import EpisodesList from "./EpisodesList";
 
 export default function App(): JSX.Element {
     const {state, dispatch} = React.useContext(Store);
-
     React.useEffect(() => {
         state.episodes.length === 0 && fetchDataAction()
     });
@@ -35,6 +35,12 @@ export default function App(): JSX.Element {
         return dispatch(dispatchObj);
     };
 
+    const props = {
+        episodes: state.episodes,
+        toggleFavAction,
+        favorites: state.favorites
+    };
+
     return (
         <React.Fragment>
             <header className="header">
@@ -47,25 +53,7 @@ export default function App(): JSX.Element {
                 </div>
             </header>
             <section className="episode-layout">
-                {state.episodes.map((episode: IEpisode) => {
-                    return (
-                        <section key={episode.id}
-                                 className="episode-box">
-                            <img src={episode.image.medium}
-                                 alt={`Love Stories' ${episode.name}`}/>
-                            <div>{episode.name}</div>
-                            <section>
-                                <div>
-                                    Season: {episode.season}
-                                    Number: {episode.number}</div>
-                                <button type="button"
-                                        onClick={() => toggleFavAction(episode)}>
-                                    {state.favorites.find((fav: IEpisode) => fav.id === episode.id) ? 'Unfav' : 'Fav'}
-                                </button>
-                            </section>
-                        </section>
-                    )
-                })}
+                <EpisodesList {...props}/>
             </section>
         </React.Fragment>
     )
