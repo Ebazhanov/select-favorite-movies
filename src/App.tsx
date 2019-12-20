@@ -1,60 +1,24 @@
 import React from 'react';
 import {Store} from "./Store";
-import {IAction, IEpisode} from "./interfaces";
-import EpisodesList from "./EpisodesList";
+import {Link} from "@reach/router";
 
-export default function App(): JSX.Element {
-    const {state, dispatch} = React.useContext(Store);
-    React.useEffect(() => {
-        state.episodes.length === 0 && fetchDataAction()
-    });
+export default function App(props: any): JSX.Element {
 
-    const fetchDataAction = async () => {
-        const URL = 'https://api.tvmaze.com/singlesearch/shows?q=love&embed=episodes';
-        const data = await fetch(URL);
-        const dataJSON = await data.json();
-        return dispatch({
-            type: 'FETCH_DATA',
-            payload: dataJSON._embedded.episodes
-        })
-    };
-
-    const toggleFavAction = (episode: IEpisode): IAction => {
-        const episodeInFav = state.favorites.includes(episode);
-        let dispatchObj = {
-            type: 'ADD_FAV',
-            payload: episode
-        };
-        if (episodeInFav) {
-            const favWithoutEpisode = state.favorites.filter((fav: IEpisode) => fav.id !== episode.id);
-            dispatchObj = {
-                type: 'REMOVE_FAV',
-                payload: favWithoutEpisode
-            }
-        }
-        return dispatch(dispatchObj);
-    };
-
-    const props = {
-        episodes: state.episodes,
-        toggleFavAction,
-        favorites: state.favorites
-    };
+    const {state} = React.useContext(Store);
 
     return (
         <React.Fragment>
             <header className="header">
                 <div>
-                <h1>Love Stories </h1>
-                <p>Pick your favorite episode !!!</p>
+                    <h1>Love Stories </h1>
+                    <p>Pick your favorite episode !!!</p>
                 </div>
                 <div>
-                    Favorite(s): {state.favorites.length}
+                    <Link to='/'>Home</Link>
+                    <Link to='/faves'>Favorite(s): {state.favorites.length}</Link>
                 </div>
             </header>
-            <section className="episode-layout">
-                <EpisodesList {...props}/>
-            </section>
+            {props.children}
         </React.Fragment>
     )
 }
