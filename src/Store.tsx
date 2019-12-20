@@ -14,6 +14,8 @@ function reducer(state: IState, action: IAction): IState {
             return {...state, episodes: action.payload};
         case 'ADD_FAV':
             return {...state, favorites: [...state.favorites, action.payload]};
+        case 'REMOVE_FAV':
+            return {...state, favorites: action.payload};
         default:
             return state;
     }
