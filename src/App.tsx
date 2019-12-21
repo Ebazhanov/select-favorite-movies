@@ -14,7 +14,7 @@ export default function App(props: any): JSX.Element {
                     <p>Pick your favorite episode !!!</p>
                 </div>
                 <div>
-                    <Link to='/'>Home</Link>
+                    <Link to='/'> Home   </Link>
                     <Link to='/faves'>Favorite(s): {state.favorites.length}</Link>
                 </div>
             </header>

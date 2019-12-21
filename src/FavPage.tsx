@@ -1,9 +1,10 @@
 import React from "react";
 import {Store} from "./Store";
-import EpisodesList from "./EpisodesList";
 import {IEpisodeProps} from "./interfaces";
 
-export default function FavPage():JSX.Element {
+const EpisodeList = React.lazy<any>(() => import('./EpisodesList'));
+
+export default function FavPage(): JSX.Element {
     const {state, dispatch} = React.useContext(Store);
     const props: IEpisodeProps = {
         episodes: state.favorites,
@@ -14,7 +15,7 @@ export default function FavPage():JSX.Element {
     return (
         <React.Suspense fallback={<div>loading ...</div>}>
             <div className="episode-layout">
-                <EpisodesList {...props}/>
+                <EpisodeList {...props}/>
             </div>
         </React.Suspense>
     )
