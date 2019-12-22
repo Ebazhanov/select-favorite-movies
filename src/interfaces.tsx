@@ -22,7 +22,6 @@ export interface IEpisode {
     url: string
 }
 
-
 export interface IEpisodeProps {
     episodes: Array<IEpisode>,
     store: { state: IState, dispatch: any }
