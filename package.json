@@ -1,24 +1,21 @@
 {
-  "name": "typescript-react-example",
+  "name": "typescript-react-hooks",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@reach/router": "^1.2.1",
-    "@types/node": "^12.12.21",
-    "@types/reach__router": "^1.2.6",
-    "@types/react": "^16.9.16",
-    "@types/react-dom": "^16.9.4",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0",
-    "react-scripts": "3.3.0",
-    "typescript": "^3.7.3"
+    "@reach/router": "^1.3.3",
+    "@types/node": "^13.13.0",
+    "@types/reach__router": "^1.3.4",
+    "@types/react": "^16.9.34",
+    "@types/react-dom": "^16.9.6",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-scripts": "3.4.1",
+    "typescript": "^3.8.3"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
   },
   "browserslist": {
     "production": [
