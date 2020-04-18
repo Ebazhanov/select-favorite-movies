@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
-import {StoreProvider} from "./Store";
 import {RouteComponentProps, Router} from '@reach/router'
+import {StoreProvider} from "./app/Store";
+import App from "./app/App";
 import HomerPage from "./pages/HomerPage";
-import FavPage from './pages/FavPage'
+import FavPage from "./pages/FavPage";
 
 const RouterPage = (props: { pageComponent: JSX.Element } & RouteComponentProps) => props.pageComponent;
 

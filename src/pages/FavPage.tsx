@@ -1,8 +1,8 @@
 import React from "react";
-import {Store} from "../Store";
-import {IEpisodeProps} from "../interfaces";
+import {Store} from "../app/Store";
+import {IEpisodeProps} from "../app/interfaces";
 
-const EpisodeList = React.lazy<any>(() => import('../EpisodesList'));
+const EpisodeList = React.lazy<any>(() => import('../app/EpisodesList'));
 
 export default function FavPage(): JSX.Element {
     const {state, dispatch} = React.useContext(Store);
