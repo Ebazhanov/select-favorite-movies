@@ -4,8 +4,8 @@ import './index.css';
 import App from './App';
 import {StoreProvider} from "./Store";
 import {RouteComponentProps, Router} from '@reach/router'
-import HomerPage from "./HomerPage";
-import FavPage from './FavPage'
+import HomerPage from "./pages/HomerPage";
+import FavPage from './pages/FavPage'
 
 const RouterPage = (props: { pageComponent: JSX.Element } & RouteComponentProps) => props.pageComponent;
 
