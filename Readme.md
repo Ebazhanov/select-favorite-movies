@@ -1,6 +1,6 @@
 in progress
 --------------------------------
-> This repo is web App with an example of hooks (useState, useContext, useEffect) and code splitting with lazy. 
+> This repo is an example of Web App with hooks (useState, useContext, useEffect) and code splitting with lazy. 
 
 #### TODO
 - [ ] update (scc, style) buttons fonts ....

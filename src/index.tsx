@@ -14,7 +14,7 @@ ReactDOM.render(
         <Router>
             <App path='/'>
                 <RouterPage pageComponent={<HomerPage/>} path='/'/>
-                <RouterPage pageComponent={<FavPage/>} path='/faves'/>
+                <RouterPage pageComponent={<FavPage/>} path='/favorite'/>
             </App>
         </Router>
     </StoreProvider>,

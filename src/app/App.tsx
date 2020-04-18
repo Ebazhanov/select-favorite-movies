@@ -15,7 +15,7 @@ export default function App(props: any): JSX.Element {
                 </div>
                 <div>
                     <button><Link to='/'> Home   </Link></button>
-                    <button><Link to='/faves'>Favorite(s): {state.favorites.length}</Link></button>
+                    <button><Link to='/favorite'>Favorite(s): {state.favorites.length}</Link></button>
                 </div>
             </header>
             {props.children}
