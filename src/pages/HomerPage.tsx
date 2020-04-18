@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect, useContext} from 'react';
 import {IEpisodeProps} from "../app/interfaces";
 import EpisodesList from "../app/EpisodesList";
 import {fetchDataAction, toggleFavAction} from "../app/Actions";
@@ -6,9 +6,9 @@ import {Store} from "../app/Store";
 
 export default function HomerPage() {
 
-    const {state, dispatch} = React.useContext(Store);
+    const {state, dispatch} = useContext(Store);
 
-    React.useEffect(() => {
+    useEffect(() => {
         state.episodes.length === 0 && fetchDataAction(dispatch)
     });
 
