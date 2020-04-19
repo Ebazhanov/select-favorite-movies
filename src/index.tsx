@@ -2,8 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import {RouteComponentProps, Router} from '@reach/router'
-import {StoreProvider} from "./app/Store";
-import App from "./app/App";
+import {StoreProvider} from "./app/components/Store";
+import App from "./app/components/app/App";
 import HomerPage from "./pages/HomerPage";
 import FavPage from "./pages/FavPage";
 

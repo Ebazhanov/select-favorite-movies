@@ -1,8 +1,8 @@
 import React, {useEffect, useContext} from 'react';
-import {IEpisodeProps} from "../app/interfaces";
-import EpisodesList from "../app/EpisodesList";
-import {fetchDataAction, toggleFavAction} from "../app/Actions";
-import {Store} from "../app/Store";
+import {IEpisodeProps} from "../app/components/interfaces";
+import EpisodesList from "../app/components/episodes-list/EpisodesList";
+import {fetchDataAction, toggleFavAction} from "../app/components/Actions";
+import {Store} from "../app/components/Store";
 
 export default function HomerPage() {
 
