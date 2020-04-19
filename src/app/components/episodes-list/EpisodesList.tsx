@@ -1,5 +1,6 @@
 import React from 'react'
 import {IEpisode} from "../interfaces";
+import './EpisodesList.css'
 
 export default function EpisodesList(props: any) {
     const {episodes, toggleFavAction, favorites, store} = props;

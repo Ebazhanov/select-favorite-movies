@@ -19,10 +19,6 @@ body {
   mid-width: 100vh;
 }
 
-.episode-box {
-  padding: .5rem;
-}
-
 .header {
   display: flex;
   justify-content: space-between;
