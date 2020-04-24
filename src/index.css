@@ -11,7 +11,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: bisque;
+  background: bisque;
 }
 
 .episode-layout {
@@ -23,7 +23,7 @@ body {
 .header {
   display: flex;
   justify-content: space-between;
-  background: white;
+  background: antiquewhite;
   border-bottom: 1px solid black;
   padding: .5rem;
   position: sticky;
